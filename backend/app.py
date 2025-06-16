@@ -18,7 +18,7 @@ def collatz_sequence(n):
         sequence.append(n)
     return sequence
 
-# Endpoint REST para la Conjetura de Collatz
+# Endpoint REST para la aplicación
 @app.route('/collatz/<int:n>', methods=['GET'])
 def get_collatz_sequence(n):
     try:
@@ -31,5 +31,5 @@ def get_collatz_sequence(n):
 
 
 if __name__ == '__main__':
-  
+  # Si cambias el puerto, cambia también el de la carpeta front o no funciona
     app.run(host='0.0.0.0', port=5001, debug=True)
